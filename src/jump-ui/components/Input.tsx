@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { twMerge } from "tailwind-merge";
 import { config as c } from "./config";
@@ -9,7 +10,7 @@ type InputProps = React.InputHTMLAttributes<HTMLInputElement> & {
   iconEnd?: string | React.ReactNode | undefined;
 };
 
-export default function Input({
+export function Input({
   className,
   icon,
   iconEnd,
@@ -25,7 +26,7 @@ export default function Input({
   } ${iconEnd && "pr-9"} w-full`;
 
   return (
-    <span className="relative">
+    <span className="relative block">
       {icon && (
         <span className={`absolute left-3 top-0 flex items-center h-full`}>
           {icon}
