@@ -13,9 +13,9 @@ export function Checkbox({
 }) {
   const [checked, setChecked] = useState(false);
 
-  const defaultStyles = `flex items-center justify-center cursor-pointer h-[1.5rem] w-[1.5rem] rounded-md ${
-    c.border
-  } ${c.focus} ${checked ? c.bg : "bg-transparent"}`;
+  const defaultStyles = `flex items-center justify-center cursor-pointer h-[1.5rem] w-[1.5rem] ${
+    c.rounded
+  } ${c.border} ${c.focus} ${checked ? c.bg : "bg-transparent"}`;
 
   return (
     <label className={twMerge(defaultStyles, className)}>
