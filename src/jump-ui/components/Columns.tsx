@@ -12,7 +12,7 @@ type ColumnsProps = {
   rounded?: boolean;
 };
 
-export default function Columns({
+export function Columns({
   children,
   cols = 2,
   className,

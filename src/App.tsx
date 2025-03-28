@@ -1,13 +1,19 @@
 import "./App.css";
-import { Button, Input, Checkbox } from "./jump-ui";
+import {
+  Button,
+  Input,
+  Checkbox,
+  Badge,
+  Columns,
+  Column,
+  Center,
+  Card,
+  Box,
+} from "./jump-ui";
 import { RiArrowLeftLine, RiSearchLine } from "react-icons/ri";
-import Columns from "./jump-ui/components/Columns";
-import Column from "./jump-ui/components/Column";
-import Center from "./jump-ui/components/Center";
-import Card from "./jump-ui/components/Card";
-import Box from "./jump-ui/components/Box";
-import Badge from "./jump-ui/components/Badge";
+
 import ThemeToggle from "./ToggleTheme";
+import { Select, Option } from "./jump-ui/components/Select";
 
 function App() {
   const submitHandler = (e: React.FormEvent) => {
@@ -64,6 +70,12 @@ function App() {
           <RiArrowLeftLine size={18} />
         </Button>
       </Box>
+
+      <Select>
+        <Option value="op1-1">Option 1</Option>
+        <Option value="op2">Option 2</Option>
+        <Option value="op3">Option 3</Option>
+      </Select>
 
       <Columns cols={2} outline rounded>
         <Column p={8}>

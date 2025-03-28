@@ -15,7 +15,7 @@ type BadgeProps = {
   fill?: boolean;
 };
 
-export default function Badge({
+export function Badge({
   children,
   className,
   style,

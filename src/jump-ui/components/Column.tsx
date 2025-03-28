@@ -12,7 +12,7 @@ type ColumnProps = {
   style?: React.CSSProperties;
 };
 
-export default function Column({
+export function Column({
   children,
   p = 4,
   className,

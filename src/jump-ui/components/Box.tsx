@@ -18,7 +18,7 @@ type BoxProps = {
   column?: boolean;
 };
 
-export default function Box({
+export function Box({
   children,
   className,
   style,

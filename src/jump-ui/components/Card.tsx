@@ -14,7 +14,7 @@ type CardProps = {
   p?: number;
 };
 
-export default function Card({
+export function Card({
   children,
   className,
   style,
