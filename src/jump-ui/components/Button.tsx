@@ -22,10 +22,11 @@ export function Button({
   iconButton,
   ...props
 }: ButtonProps) {
-  const initialClasses = `${c.bg} text-white ${c.height} dark:text-zinc-900 text-sm px-4 py-2 ${c.rounded} cursor-pointer hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-zinc-400 focus:ring-opacity-50 active:translate-y-[1px] flex items-center justify-center`;
+  const initialClasses = `text-white ${c.height} dark:text-zinc-900 text-sm px-4 py-2 ${c.rounded} cursor-pointer hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-zinc-400 focus:ring-opacity-50 active:translate-y-[1px] flex items-center justify-center`;
 
-  const outlineStyle =
-    outline && `${c.outline} bg-transparent text-zinc-900 dark:text-white`;
+  const bgStyle = outline ? `bg-transparent` : c.bg;
+
+  const outlineStyle = outline && `${c.outline}  text-zinc-900 dark:text-white`;
 
   const iconButtonStyle = iconButton ? `${c.height} ${c.width} p-0` : "";
 
@@ -33,8 +34,9 @@ export function Button({
     <button
       className={twMerge(
         initialClasses,
-        outlineStyle,
         iconButtonStyle,
+        outlineStyle,
+        bgStyle,
         className
       )}
       style={style}

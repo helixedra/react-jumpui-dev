@@ -6,6 +6,7 @@ import Column from "./jump-ui/components/Column";
 import Center from "./jump-ui/components/Center";
 import Card from "./jump-ui/components/Card";
 import Box from "./jump-ui/components/Box";
+import Badge from "./jump-ui/components/Badge";
 import ThemeToggle from "./ToggleTheme";
 
 function App() {
@@ -55,19 +56,13 @@ function App() {
         </Box>
       </form>
 
-      <Box>
+      <Box justify="between">
         <Button iconButton>
           <RiArrowLeftLine size={18} />
         </Button>
         <Button iconButton outline>
           <RiArrowLeftLine size={18} />
         </Button>
-      </Box>
-
-      <Box className="w-full h-screen">
-        <Center>
-          <RiArrowLeftLine />
-        </Center>
       </Box>
 
       <Columns cols={2} outline rounded>
@@ -89,6 +84,19 @@ function App() {
           </Center>
         </Column>
       </Columns>
+
+      <Box gap={1}>
+        <Badge dot="bg-red-500" bg="bg-red-500">
+          Declined
+        </Badge>
+        <Badge bg="bg-yellow-500">Pending</Badge>
+        <Badge bg="bg-green-600" fill text="text-white">
+          Approved
+        </Badge>
+        <Badge bg="bg-[#0000ff]" dot="bg-[#0000ff]" text="text-[#0000ff]">
+          Approved
+        </Badge>
+      </Box>
     </main>
   );
 }
