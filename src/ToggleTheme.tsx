@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "./jump-ui";
+import { RiSunLine, RiMoonLine } from "react-icons/ri";
 
 export default function ThemeToggle() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -34,8 +35,8 @@ export default function ThemeToggle() {
   }, [darkMode]);
 
   return (
-    <Button onClick={toggleTheme} className="absolute top-4 right-4">
-      {darkMode ? "Light Mode" : "Dark Mode"}
+    <Button iconButton onClick={toggleTheme} className="absolute top-4 right-4">
+      {darkMode ? <RiSunLine size={18} /> : <RiMoonLine size={18} />}
     </Button>
   );
 }
