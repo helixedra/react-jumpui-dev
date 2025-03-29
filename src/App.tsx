@@ -71,10 +71,10 @@ function App() {
         </Button>
       </Box>
 
-      <Select>
-        <Option value="op1-1">Option 1</Option>
-        <Option value="op2">Option 2</Option>
-        <Option value="op3">Option 3</Option>
+      <Select className="w-80">
+        <Option value="op1-1">Opt</Option>
+        <Option value="op2">Exercitationem incidunt beatae sed ratione</Option>
+        <Option value="op3">Exercitationem incidunt</Option>
       </Select>
 
       <Columns cols={2} outline rounded>

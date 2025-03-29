@@ -1,6 +1,10 @@
 export const config = {
   bg: "bg-zinc-800 dark:bg-white",
+  listBg: "dark:bg-zinc-800 bg-white",
+  listHover: "hover:bg-zinc-100 dark:hover:bg-zinc-700",
   border: "border border-zinc-300 dark:border-zinc-700",
+  outlineButtonBorder: "border border-zinc-400 dark:border-zinc-700",
+  outlineButtonBg: "bg-zinc-200/50 dark:bg-zinc-700/30",
   outline: "border border-zinc-900 dark:border-white",
   divide: "divide-zinc-300 dark:divide-zinc-700",
   shadow: "shadow-lg",
