@@ -10,7 +10,7 @@ export const config = {
   shadow: "shadow-lg",
   focus:
     "focus:outline-none focus:ring-2 focus:ring-zinc-400 focus:ring-opacity-50",
-  rounded: "rounded-md",
+  rounded: "rounded-lg",
   height: "h-[2.5rem]",
   width: "w-[2.5rem]",
 };

@@ -7,3 +7,4 @@ export { Column } from "./components/Column";
 export { Center } from "./components/Center";
 export { Card } from "./components/Card";
 export { Box } from "./components/Box";
+export { Dialog } from "./components/Dialog";

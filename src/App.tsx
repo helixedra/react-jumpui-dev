@@ -9,6 +9,7 @@ import {
   Center,
   Card,
   Box,
+  Dialog,
 } from "./jump-ui";
 import { RiArrowLeftLine, RiSearchLine } from "react-icons/ri";
 
@@ -109,8 +110,28 @@ function App() {
           Approved
         </Badge>
       </Box>
+
+      <DialogContainer />
     </main>
   );
 }
 
 export default App;
+
+import { useState } from "react";
+export function DialogContainer() {
+  "use client";
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <>
+      <Button onClick={() => setIsOpen(true)}>Dialog</Button>
+      <Dialog isOpen={isOpen} onClose={() => setIsOpen(false)}>
+        <Dialog.Header>Dialog Title</Dialog.Header>
+        <Dialog.Content>
+          <p>This is the content of the dialog.</p>
+        </Dialog.Content>
+      </Dialog>
+    </>
+  );
+}
