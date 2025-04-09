@@ -10,6 +10,7 @@ import {
   Card,
   Box,
   Dialog,
+  Radio,
 } from "./jump-ui";
 import { RiArrowLeftLine, RiSearchLine } from "react-icons/ri";
 import { Table } from "./jump-ui/components/Table";
@@ -55,14 +56,12 @@ function App() {
       <Button outline iconEnd={<RiSearchLine />}>
         Outline Button
       </Button>
-
       <Input />
       <Input
         placeholder="Search"
         icon={<RiSearchLine />}
         iconEnd={<RiArrowLeftLine />}
       />
-
       <form onSubmit={(e) => submitHandler(e)} className="space-y-4">
         <Checkbox name="option" />
         <Box gap={4}>
@@ -75,7 +74,6 @@ function App() {
           </Box>
         </Box>
       </form>
-
       <Box justify="between">
         <Button iconButton>
           <RiArrowLeftLine size={18} />
@@ -84,13 +82,11 @@ function App() {
           <RiArrowLeftLine size={18} />
         </Button>
       </Box>
-
       <Select className="w-80">
         <Option value="op1-1">Opt</Option>
         <Option value="op2">Exercitationem incidunt beatae sed ratione</Option>
         <Option value="op3">Exercitationem incidunt</Option>
       </Select>
-
       <Columns cols={2} outline rounded>
         <Column p={8}>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -110,7 +106,6 @@ function App() {
           </Center>
         </Column>
       </Columns>
-
       <Box gap={1}>
         <Badge dot="bg-red-500" bg="bg-red-500">
           Declined
@@ -123,9 +118,7 @@ function App() {
           Approved
         </Badge>
       </Box>
-
       <DialogContainer />
-
       {/* Basic table with striped rows and hover effect */}
       <Table striped hover className="mb-8">
         <Table.Thead>
@@ -147,7 +140,6 @@ function App() {
           ))}
         </Table.Tbody>
       </Table>
-
       {/* Bordered and compact table */}
       <Table bordered compact>
         <Table.Thead>
@@ -173,6 +165,18 @@ function App() {
           )}
         </Table.Tbody>
       </Table>
+
+      <Radio.Group
+        name="favorite-fruit"
+        legend="Choose your favorite fruit"
+        required={true}
+        orientation="vertical"
+      >
+        <Radio value="apple" label="Apple" />
+        <Radio value="banana" label="Banana" />
+        <Radio value="orange" label="Orange" disabled />
+        <Radio value="strawberry" label="Strawberry" />
+      </Radio.Group>
     </main>
   );
 }

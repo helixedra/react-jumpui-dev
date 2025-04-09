@@ -8,3 +8,4 @@ export { Center } from "./components/Center";
 export { Card } from "./components/Card";
 export { Box } from "./components/Box";
 export { Dialog } from "./components/Dialog";
+export { default as Radio } from "./components/Radio";
