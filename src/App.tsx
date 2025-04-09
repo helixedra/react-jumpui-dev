@@ -12,6 +12,19 @@ import {
   Dialog,
 } from "./jump-ui";
 import { RiArrowLeftLine, RiSearchLine } from "react-icons/ri";
+import { Table } from "./jump-ui/components/Table";
+
+// Sample data
+const users = [
+  { id: 1, name: "John Doe", email: "john@example.com", role: "Admin" },
+  { id: 2, name: "Jane Smith", email: "jane@example.com", role: "User" },
+  {
+    id: 3,
+    name: "Robert Johnson",
+    email: "robert@example.com",
+    role: "Editor",
+  },
+];
 
 import ThemeToggle from "./ToggleTheme";
 import { Select, Option } from "./jump-ui/components/Select";
@@ -112,6 +125,54 @@ function App() {
       </Box>
 
       <DialogContainer />
+
+      {/* Basic table with striped rows and hover effect */}
+      <Table striped hover className="mb-8">
+        <Table.Thead>
+          <Table.Tr>
+            <Table.Th>ID</Table.Th>
+            <Table.Th>Name</Table.Th>
+            <Table.Th>Email</Table.Th>
+            <Table.Th>Role</Table.Th>
+          </Table.Tr>
+        </Table.Thead>
+        <Table.Tbody>
+          {users.map((user) => (
+            <Table.Tr key={user.id}>
+              <Table.Td>{user.id}</Table.Td>
+              <Table.Td>{user.name}</Table.Td>
+              <Table.Td>{user.email}</Table.Td>
+              <Table.Td>{user.role}</Table.Td>
+            </Table.Tr>
+          ))}
+        </Table.Tbody>
+      </Table>
+
+      {/* Bordered and compact table */}
+      <Table bordered compact>
+        <Table.Thead>
+          <Table.Tr>
+            <Table.Th>ID</Table.Th>
+            <Table.Th>Name</Table.Th>
+            <Table.Th>Email</Table.Th>
+            <Table.Th>Role</Table.Th>
+          </Table.Tr>
+        </Table.Thead>
+        <Table.Tbody>
+          {users.length > 0 ? (
+            users.map((user) => (
+              <Table.Tr key={user.id}>
+                <Table.Td>{user.id}</Table.Td>
+                <Table.Td>{user.name}</Table.Td>
+                <Table.Td>{user.email}</Table.Td>
+                <Table.Td>{user.role}</Table.Td>
+              </Table.Tr>
+            ))
+          ) : (
+            <Table.EmptyRow colSpan={4} message="No users found" />
+          )}
+        </Table.Tbody>
+      </Table>
     </main>
   );
 }
